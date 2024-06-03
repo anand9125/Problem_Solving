@@ -1,0 +1,55 @@
+lass Solution {
+    public ListNode middleNode(ListNode head) {
+        ListNode slow=head;
+        ListNode fast=head;
+        
+      //for the odd case  
+        // while(fast.next!=null){
+        //     slow=slow.next;
+        //     fast=fast.next.next;
+        // }
+        // return slow;
+
+        //for the even case
+
+        //    while(fast!=null){
+        //     slow=slow.next;
+        //     fast=fast.next.next;
+        // }
+        // return slow;
+
+        //for both fast and slow 
+        //       while(fast.next!= null && fast!=null){
+        //     slow=slow.next;
+        //     fast=fast.next.next;
+        // }
+        // return slow;
+      //  givig error because of pahle fast!=null then fast.next!= null
+
+      
+              while(fast!=null && fast.next!= null  ){
+            slow=slow.next;
+            fast=fast.next.next;}
+        return slow;
+      
+
+
+        // int len=0;
+        // while(temp!=null){
+        //     temp=temp.next;
+        //     len++;
+        // }
+        // //time complexity of this code is 0(n)
+        // //extra space =0(1)
+        // //two pass soloution 
+        // int mid=len/2 + 1;
+        // temp=head;
+        // for(int i=1;i<=mid-1;i++){
+        //     temp=temp.next;
+
+        // }return temp; 
+
+
+    } 
+    }
+//one pass solution  without finding the length of list (slow fast apporoch)
